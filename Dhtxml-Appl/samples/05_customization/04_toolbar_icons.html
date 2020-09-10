@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Toolbar icons</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+	<script type="text/javascript" src="../../codebase/spreadsheet.js?v=3.1.4"></script>
+	<link rel="stylesheet" href="../../codebase/spreadsheet.css?v=3.1.4">
+	<link rel="stylesheet" href="../common/index.css?v=3.1.4">
+	<script type="text/javascript" src="../common/dataset.js?v=3.1.4"></script>
+</head>
+
+<body>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css?v=3.1.4" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+		crossorigin="anonymous">
+		
+	<header>
+	<div class="dhx_sample-header__main">
+		<nav class="dhx_sample-header__breadcrumbs">
+			<ul class="dhx_sample-header-breadcrumbs">
+				<li class="dhx_sample-header-breadcrumbs__item">
+					<a href="../" class="dhx_sample-header-breadcrumbs__link">Spreadsheet samples</a>
+				</li>
+				<li class="dhx_sample-header-breadcrumbs__item">
+					<a href="./" class="dhx_sample-header-breadcrumbs__link">customization</a>
+				</li>
+				<li class="dhx_sample-header-breadcrumbs__item">
+					<span class="dhx_sample-header-breadcrumbs__link">toolbar icons</span>
+				</li>
+			</ul>
+		</nav>
+		<h1 class="dhx_sample-header__title">
+			Toolbar icons.
+			Check documentation:
+			<a href="https://docs.dhtmlx.com/spreadsheet/customization.html#toolbar" target="_blank" class="dhx_sample-header-link">Customization</a>
+		</h1>
+	</div>
+</header>
+<section class="dhx_sample-controls">
+		<div class="dhx_sample-input__wrapper dhx_sample-input__wrapper--pl-16">
+			<input checked name="mode" value="dxi" id="dxi" onchange="setIcons(this.value)" type="radio" class="dhx_sample-radio__input">
+			<label for="dxi" class="dhx_sample-radio__label">Material Icons</label>
+		</div>
+		<div class="dhx_sample-input__wrapper dhx_sample-input__wrapper--pl-16">
+			<input name="mode" value="fa" id="fa" onchange="setIcons(this.value)" type="radio" class="dhx_sample-radio__input">
+			<label for="fa" class="dhx_sample-radio__label">Font Awesome</label>
+		</div>
+	</section>
+	<!-- <section class="dhx_sample-controls">
+			<div class="dhx_sample-input__wrapper dhx_sample-input__wrapper--pl-16">
+				<input checked name="mode" value="classic" id="classic" onchange="handleChange(this.value)" type="radio" class="dhx_sample-radio__input">
+				<label for="classic" class="dhx_sample-radio__label">Classic mode</label>
+			</div>
+			<div class="dhx_sample-input__wrapper dhx_sample-input__wrapper--pl-16">
+				<input name="mode" value="document" id="document" onchange="handleChange(this.value)" type="radio" class="dhx_sample-radio__input">
+				<label for="document" class="dhx_sample-radio__label">Document mode</label>
+			</div>
+		</section> -->
+	<!-- <div class="top-rect-block">
+		<div class="radio-group-block">
+			<label class="dhx_demo_checkbox">
+				<input type="radio" name="icons" checked="checked" value="dxi" onchange="setIcons(this.value)">
+				<div class="checkmark"></div>
+				Material Icons
+			</label>
+			<label class="dhx_demo_checkbox">
+				<input type="radio" name="icons" value="fa" onchange="setIcons(this.value)">
+				<div class="checkmark"></div>
+				Font Awesome
+			</label>
+		</div>
+	</div> -->
+	<section class="dhx_sample-container" >
+		<div class="dhx_sample-container__widget" style="height: 500px" id="cont"></div>
+	</section>
+	<script>
+		var spreadsheet = new dhx.Spreadsheet("cont");
+		spreadsheet.parse(dataset);
+
+		function setIcons(type) {
+			switch (type) {
+				case "fa":
+					spreadsheet.toolbar.data.update("undo", {
+						icon: "fa fa-undo"
+					});
+					spreadsheet.toolbar.data.update("redo", {
+						icon: "fa fa-redo"
+					});
+					spreadsheet.toolbar.paint();
+					break;
+				case "dxi":
+					spreadsheet.toolbar.data.update("undo", {
+						icon: "dxi-undo"
+					});
+					spreadsheet.toolbar.data.update("redo", {
+						icon: "dxi-redo"
+					});
+					spreadsheet.toolbar.paint();
+					break;
+			}
+		}
+	</script>
+</body>
+
+</html>

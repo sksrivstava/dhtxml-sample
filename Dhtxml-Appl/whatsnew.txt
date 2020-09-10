@@ -1,0 +1,71 @@
+Version 3.1.4 (September 2019)
+----------------------------
+
+### Fixes
+- Styles fixes
+
+Version 3.1.3 (September 2019)
+----------------------------
+
+### Fixes
+- Issue with focus on a cell when Spreadsheet is attached to Layout
+
+Version 3.1.2 (March 2019)
+----------------------------
+
+### Fixes
+- Issue with underlining right-aligned text
+- Issues with text styles in Excel export
+
+Version 3.1.1 (March 2019)
+----------------------------
+
+### Fixes
+- Issues with export to Excel
+
+Version 3.1.0 (March 2019)
+----------------------------
+
+### New functionality
+
+- Import data in the Excel format
+- Export data to an Excel file
+- Number formatting
+- Auto filling of cells
+
+### Updates
+- Hotkeys behavior in a range of cells
+
+### Fixes
+- Issues with hotkeys on the active cell
+
+Version 3.0.3 (December 2018)
+----------------------------
+
+### Fixes
+- Incorrect behavior in the custom read-only mode
+- Issues with methods of removing a column/row
+- Issues with loss of focus on the edit line
+- Issues with hotkeys on the active cell
+
+Version 3.0.2 (December 2018)
+----------------------------
+
+### Fixes
+- Issues with hotkeys behavior
+- Issues with placement of the selection handle
+- Issues with loss of focus on the active cell
+- Incorrect behavior of selection on the active cell
+- Incorrect behavior of hotkeys on the active cell
+- Incorrect behavior of scrolling by arrow keys
+
+Version 3.0.1 (November 2018)
+----------------------------
+
+### Fixes
+- Incorrect behavior of the undo operation
+- Incorrect behavior of the cut-paste operation on a group of cells
+
+Version 3.0 (October 2018)
+----------------------------
+
